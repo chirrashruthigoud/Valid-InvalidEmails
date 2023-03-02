@@ -8,7 +8,7 @@ namespace ValidAndInvalidEmails
     {
         public static void Main(string[] args)
         {
-            string email = "abc@gmail.com.comm";
+            string email = "abc+100@gmail.com";
 
             if (Regex.IsMatch(email, ">^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$"))
             {
