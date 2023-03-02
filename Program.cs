@@ -6,18 +6,23 @@ namespace ValidAndInvalidEmails
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static bool func()
         {
-            string email = "abc@yahoo.com";
-
-            if (Regex.IsMatch(email, @"^[a-zA-Z0-9@.]+$"))
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            string email = "abc-100@yahoo.com";
+            Match match = regex.Match(email);
+            if (match.Success)
             {
-                Console.WriteLine("Valid");
+                return true;
             }
             else
             {
-                Console.WriteLine("Invalid");
+                return false;
             }
+        }
+        public static void Main(string[] args)
+        {
+            Program.func();
         }
     }
 }
