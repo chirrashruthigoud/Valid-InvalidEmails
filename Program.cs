@@ -8,9 +8,9 @@ namespace ValidAndInvalidEmails
     {
         public static void Main(string[] args)
         {
-            string email = " abc-100@abc.net";
+            string email = " abc.100@abc.com.au";
 
-            if (Regex.IsMatch(email, "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$"))
+            if (Regex.IsMatch(email, "^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"))
             {
                 Console.WriteLine("Valid");
             }
